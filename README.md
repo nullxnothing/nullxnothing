@@ -1,11 +1,11 @@
 <p align="center">
   <a href="https://github.com/nullxnothing">
-    <img src="https://readme-typing-svg.demolab.com/?lines=solana+developer;security+researcher;building+onchain+tooling&font=JetBrains+Mono&center=true&width=500&height=50&color=9945FF&vCenter=true&pause=1000&size=22&duration=3000" />
+    <img src="https://readme-typing-svg.demolab.com/?lines=solana+developer;web3+dev;building+onchain+tooling&font=JetBrains+Mono&center=true&width=500&height=50&color=9945FF&vCenter=true&pause=1000&size=22&duration=3000" />
   </a>
 </p>
 
 <p align="center">
-  <samp>building security tooling and infrastructure for solana</samp>
+  <samp>building onchain tooling and infrastructure for solana</samp>
 </p>
 
 <br>
@@ -13,7 +13,7 @@
 ### about
 
 - shipping solana tools — wallets, agents, trading infra
-- security research — smart contract auditing, exploit analysis, red teaming
+- web3 dev — smart contracts, defi protocols, onchain infrastructure
 - everything is typescript, rust, and python
 
 <br>
@@ -104,9 +104,13 @@
 ### stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=nullxnothing&show_icons=true&include_all_commits=true&count_private=true&theme=transparent&hide_border=true&title_color=9945FF&icon_color=9945FF&text_color=c9d1d9&ring_color=9945FF" height="170px"/>
+  <picture>
+    <img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=nullxnothing&show_icons=true&include_all_commits=true&count_private=true&theme=transparent&hide_border=true&title_color=9945FF&icon_color=9945FF&text_color=c9d1d9&ring_color=9945FF" height="170px"/>
+  </picture>
   &nbsp;&nbsp;
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nullxnothing&layout=compact&theme=transparent&hide_border=true&title_color=9945FF&text_color=c9d1d9" height="170px"/>
+  <picture>
+    <img alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=nullxnothing&langs_count=8&layout=compact&theme=transparent&hide_border=true&title_color=9945FF&text_color=c9d1d9" height="170px"/>
+  </picture>
 </p>
 
 <p align="center">
