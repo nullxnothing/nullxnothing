@@ -33,6 +33,29 @@
 <table>
   <tr>
     <td width="50%">
+      <h3 align="center">internet402</h3>
+      <p align="center">Solana-native HTTP 402 payment protocol for AI agents</p>
+      <p align="center">
+        <a href="https://github.com/nullxnothing/internet402">
+          <img src="https://img.shields.io/badge/view_repo-0D1117?style=for-the-badge&logo=github&logoColor=white"/>
+        </a>
+        <a href="https://internet402.vercel.app">
+          <img src="https://img.shields.io/badge/website-9945FF?style=for-the-badge&logo=vercel&logoColor=white"/>
+        </a>
+      </p>
+    </td>
+    <td width="50%">
+      <h3 align="center">quanta</h3>
+      <p align="center">Agent-native market making infrastructure on Solana</p>
+      <p align="center">
+        <a href="https://github.com/nullxnothing/quanta">
+          <img src="https://img.shields.io/badge/view_repo-0D1117?style=for-the-badge&logo=github&logoColor=white"/>
+        </a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
       <h3 align="center">solblade</h3>
       <p align="center">AI-native Solana wallet CLI with scoped MCP server</p>
       <p align="center">
@@ -41,17 +64,6 @@
         </a>
       </p>
     </td>
-    <td width="50%">
-      <h3 align="center">devcred-agent</h3>
-      <p align="center">Autonomous agent monitoring pump.fun launches and scoring deployer reputation</p>
-      <p align="center">
-        <a href="https://github.com/nullxnothing/devcred-agent">
-          <img src="https://img.shields.io/badge/view_repo-0D1117?style=for-the-badge&logo=github&logoColor=white"/>
-        </a>
-      </p>
-    </td>
-  </tr>
-  <tr>
     <td width="50%">
       <h3 align="center">trenchlens</h3>
       <p align="center">Real-time Solana token intelligence and analytics dashboard</p>
@@ -64,8 +76,19 @@
         </a>
       </p>
     </td>
+  </tr>
+  <tr>
     <td width="50%">
-      <h3 align="center">nullset-solana-wallet-recovery</h3>
+      <h3 align="center">devcred-agent</h3>
+      <p align="center">Autonomous agent monitoring pump.fun launches and scoring deployer reputation</p>
+      <p align="center">
+        <a href="https://github.com/nullxnothing/devcred-agent">
+          <img src="https://img.shields.io/badge/view_repo-0D1117?style=for-the-badge&logo=github&logoColor=white"/>
+        </a>
+      </p>
+    </td>
+    <td width="50%">
+      <h3 align="center">nullset-wallet-recovery</h3>
       <p align="center">Reclaim rent accounts, creator rewards, and track locked tokens across wallets</p>
       <p align="center">
         <a href="https://github.com/nullxnothing/nullset-solana-wallet-recovery">
