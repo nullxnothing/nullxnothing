@@ -55,7 +55,7 @@ export function renderProjects() {
 
     const cmd = document.createElement('div')
     cmd.className = 'project-cmd'
-    cmd.innerHTML = `<span class="prompt">&gt; </span><span class="cmd-text"></span>`
+    cmd.innerHTML = `<span class="cmd-text"></span>`
 
     const desc = document.createElement('div')
     desc.className = 'project-desc'
@@ -79,9 +79,9 @@ export function renderProjects() {
 
     // Store data for animation
     el._projectData = {
-      cmd: `cat ./projects/${project.slug}`,
+      cmd: project.slug,
       desc: project.desc,
-      tags: project.tags.map(t => `[${t}]`).join(' '),
+      tags: project.tags.join(' / '),
     }
 
     container.appendChild(el)

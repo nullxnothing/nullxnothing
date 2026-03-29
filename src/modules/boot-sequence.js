@@ -7,11 +7,8 @@ import { renderProjects } from './projects.js'
 gsap.registerPlugin(TextPlugin, ScrollTrigger)
 
 const BOOT_LINES = [
-  'BIOS v0.0.1 ............. OK',
-  'MEMORY TEST ......... 1337K OK',
-  'LOADING KERNEL ...... solana-devnet',
-  'MOUNTING /dev/wallet0 ... OK',
-  'INITIALIZING NEURAL INTERFACE ...',
+  'LOADING ............. OK',
+  'CONNECTING .......... OK',
   '',
   'SYSTEM READY.',
 ]
@@ -83,7 +80,7 @@ async function revealIdentity(speedMult) {
   await new Promise((resolve) => {
     gsap.to(descriptor, {
       duration: 2 * speedMult,
-      text: { value: '// solana developer. onchain tooling. web3 infrastructure.' },
+      text: { value: 'solana developer — building onchain tools & infrastructure' },
       ease: 'none',
       onStart: () => { descriptor.style.opacity = '1' },
       onComplete: resolve,
@@ -102,8 +99,8 @@ function revealProjects(speedMult) {
   gsap.to(projectsSection, { opacity: 1, duration: 0.2 })
 
   gsap.to(projectsCmd, {
-    duration: 0.8 * speedMult,
-    text: { value: 'ls -la ./projects' },
+    duration: 0.6 * speedMult,
+    text: { value: 'projects' },
     ease: 'none',
     onComplete: () => {
       renderProjects()
@@ -139,8 +136,8 @@ function revealLinks(speedMult) {
 
       await new Promise((resolve) => {
         gsap.to(linksCmd, {
-          duration: 0.6 * speedMult,
-          text: { value: 'ls -la ./links' },
+          duration: 0.4 * speedMult,
+          text: { value: 'links' },
           ease: 'none',
           onComplete: resolve,
         })

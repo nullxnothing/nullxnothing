@@ -65,17 +65,23 @@
 
 .project .project-cmd {
   color: #00ff00;
+  font-weight: 700;
+  font-size: 15px;
+  text-shadow: 0 0 6px rgba(0, 255, 0, 0.3);
 }
 
 .project .project-desc {
   padding-left: 1.2rem;
-  color: rgba(0, 255, 0, 0.7);
+  color: rgba(0, 255, 0, 0.65);
+  line-height: 1.7;
 }
 
 .project .project-tags {
   padding-left: 1.2rem;
-  color: rgba(0, 255, 0, 0.35);
-  font-size: 12px;
+  color: rgba(0, 255, 0, 0.3);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .project .project-links {
@@ -95,8 +101,14 @@
 }
 
 #descriptor {
-  margin-top: 0.3rem;
+  margin-top: 0.5rem;
   margin-bottom: 2rem;
+  color: rgba(0, 255, 0, 0.5);
+  font-size: 13px;
+}
+
+.subtitle {
+  color: rgba(0, 255, 0, 0.5);
 }
 
 #identity {
