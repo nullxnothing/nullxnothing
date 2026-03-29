@@ -1,29 +1,22 @@
 #terminal {
-  max-width: 760px;
+  max-width: 700px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem 2rem;
   position: relative;
   z-index: 2;
   min-height: 100vh;
 }
 
-.prompt {
-  color: rgba(0, 255, 0, 0.5);
-  user-select: none;
+/* Boot */
+.boot-line {
+  min-height: 1.6em;
+  overflow: hidden;
+  color: rgba(0, 255, 0, 0.35);
+  font-size: 12px;
+  letter-spacing: 0.08em;
 }
 
-.prompt-line {
-  white-space: nowrap;
-}
-
-.comment {
-  color: rgba(0, 255, 0, 0.45);
-}
-
-.comment.dim {
-  color: rgba(0, 255, 0, 0.15);
-}
-
+/* Cursor */
 .cursor {
   display: inline-block;
   color: #00ff00;
@@ -38,119 +31,146 @@
   50% { opacity: 0; }
 }
 
-.boot-line {
-  min-height: 1.6em;
-  overflow: hidden;
+/* Identity */
+#identity {
+  margin: 3rem 0 3.5rem;
 }
 
-.boot-ok {
-  color: #00ff00;
-  text-shadow: 0 0 6px rgba(0, 255, 0, 0.5);
+#name-text {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-shadow: 0 0 20px rgba(0, 255, 0, 0.3), 0 0 40px rgba(0, 255, 0, 0.1);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
 }
 
-.hidden {
-  visibility: hidden;
-  opacity: 0;
+#descriptor {
+  margin-top: 0.8rem;
+  color: rgba(0, 255, 0, 0.4);
+  font-size: 14px;
+  letter-spacing: 0.02em;
 }
 
-.separator {
-  border: none;
-  border-top: 1px solid rgba(0, 255, 0, 0.1);
-  margin: 1.5rem 0;
+/* Section labels */
+.section-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(0, 255, 0, 0.25);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 255, 0, 0.08);
+}
+
+/* Projects */
+#projects-section {
+  margin: 0 0 3rem;
 }
 
 .project {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  border-left: 2px solid rgba(0, 255, 0, 0.1);
+  transition: border-color 0.3s;
+}
+
+.project:hover {
+  border-left-color: rgba(0, 255, 0, 0.4);
 }
 
 .project .project-cmd {
   color: #00ff00;
   font-weight: 700;
-  font-size: 15px;
-  text-shadow: 0 0 6px rgba(0, 255, 0, 0.3);
+  font-size: 16px;
+  text-shadow: 0 0 8px rgba(0, 255, 0, 0.2);
 }
 
 .project .project-desc {
-  padding-left: 1.2rem;
-  color: rgba(0, 255, 0, 0.65);
+  margin-top: 0.3rem;
+  color: rgba(0, 255, 0, 0.5);
+  font-size: 13px;
   line-height: 1.7;
 }
 
 .project .project-tags {
-  padding-left: 1.2rem;
-  color: rgba(0, 255, 0, 0.3);
-  font-size: 11px;
-  letter-spacing: 0.05em;
+  margin-top: 0.4rem;
+  color: rgba(0, 255, 0, 0.2);
+  font-size: 10px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .project .project-links {
-  padding-left: 1.2rem;
+  margin-top: 0.5rem;
   font-size: 12px;
 }
 
 .project .project-links a {
   margin-right: 1.5rem;
-}
-
-#name-text {
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
-  letter-spacing: 0.05em;
-}
-
-#descriptor {
-  margin-top: 0.5rem;
-  margin-bottom: 2rem;
   color: rgba(0, 255, 0, 0.5);
-  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.2s, text-shadow 0.2s;
 }
 
-.subtitle {
-  color: rgba(0, 255, 0, 0.5);
+.project .project-links a:hover {
+  color: #00ff00;
+  text-shadow: 0 0 6px rgba(0, 255, 0, 0.4);
 }
 
-#identity {
-  margin: 2rem 0;
-}
-
-#projects-section {
-  margin: 1rem 0;
-}
-
+/* Links */
 #links-section {
-  margin: 2rem 0;
+  margin: 0 0 2rem;
 }
 
 #links-list {
-  padding-left: 1.2rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 #links-list a {
-  display: block;
-  margin-bottom: 0.4rem;
+  color: rgba(0, 255, 0, 0.5);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s, text-shadow 0.2s;
 }
 
+#links-list a:hover {
+  color: #00ff00;
+  text-shadow: 0 0 8px rgba(0, 255, 0, 0.4);
+}
+
+/* Terminal end */
 #terminal-end {
-  margin: 3rem 0 1rem;
+  margin: 4rem 0 6rem;
 }
 
-#eof {
-  margin-bottom: 6rem;
-  text-align: center;
+/* Utility */
+.hidden {
+  visibility: hidden;
+  opacity: 0;
 }
 
+/* Mobile */
 @media (max-width: 600px) {
   body {
     font-size: 12px;
   }
 
   #terminal {
-    padding: 1rem;
+    padding: 2rem 1.2rem;
   }
 
   #name-text {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+  }
+
+  #descriptor {
+    font-size: 12px;
+  }
+
+  #links-list {
+    flex-direction: column;
+    gap: 0.8rem;
   }
 }

@@ -109,29 +109,22 @@ async function animateProject(el) {
   const tags = el.querySelector('.project-tags')
   const links = el.querySelector('.project-links')
 
+  // Set tags text immediately (no animation needed)
+  tags.textContent = data.tags
+
   // Hide children initially
   desc.style.opacity = '0'
   tags.style.opacity = '0'
   links.style.opacity = '0'
 
-  // Type the command
-  await new Promise((resolve) => {
-    gsap.to(cmdText, {
-      duration: data.cmd.length * 0.03,
-      text: { value: data.cmd },
-      ease: 'none',
-      onComplete: resolve,
-    })
-  })
+  // Scramble reveal the project name
+  await scrambleReveal(cmdText, data.cmd, { duration: 500 })
 
   // Scramble reveal description
   desc.style.opacity = '1'
   await scrambleReveal(desc, data.desc, { duration: 800 })
 
-  // Scramble reveal tags
-  tags.style.opacity = '1'
-  await scrambleReveal(tags, data.tags, { duration: 400, charSet: '[]01' })
-
-  // Fade in links
-  gsap.to(links, { opacity: 1, duration: 0.3 })
+  // Fade in tags and links together
+  gsap.to(tags, { opacity: 1, duration: 0.4 })
+  gsap.to(links, { opacity: 1, duration: 0.4, delay: 0.1 })
 }

@@ -51,70 +51,65 @@ export function startBoot() {
     }, `+=0.08`)
   })
 
+  // Fade out boot lines after they play
+  tl.to(bootContainer, {
+    opacity: 0,
+    duration: 0.5,
+    delay: 0.3 * speedMult,
+    onComplete: () => { bootContainer.style.display = 'none' },
+  })
+
   // After boot: reveal identity
   tl.call(() => revealIdentity(speedMult))
-  tl.to({}, { duration: 0.3 * speedMult })
 }
 
 async function revealIdentity(speedMult) {
   const identity = document.getElementById('identity')
   const nameText = document.getElementById('name-text')
   const descriptor = document.getElementById('descriptor')
-  const cursor = identity.querySelector('.cursor')
 
-  // Show identity section
   identity.style.visibility = 'visible'
-  gsap.to(identity, { opacity: 1, duration: 0.1 })
+  gsap.to(identity, { opacity: 1, duration: 0.3 })
 
   // Scramble the name from binary
-  cursor.classList.add('blink')
   await scrambleReveal(nameText, 'nullxnothing', {
     duration: 1500 * speedMult,
     stagger: 'left-to-right',
   })
 
-  // Remove cursor blink from name, type descriptor
-  cursor.classList.remove('blink')
-  cursor.style.opacity = '0'
-
+  // Type descriptor
   await new Promise((resolve) => {
     gsap.to(descriptor, {
-      duration: 2 * speedMult,
+      duration: 1.8 * speedMult,
       text: { value: 'solana developer — building onchain tools & infrastructure' },
       ease: 'none',
-      onStart: () => { descriptor.style.opacity = '1' },
       onComplete: resolve,
     })
   })
 
-  // Reveal projects section
+  // Reveal projects + links
   revealProjects(speedMult)
 }
 
 function revealProjects(speedMult) {
   const projectsSection = document.getElementById('projects-section')
-  const projectsCmd = document.getElementById('projects-cmd')
+  const projectsLabel = document.getElementById('projects-label')
 
   projectsSection.style.visibility = 'visible'
-  gsap.to(projectsSection, { opacity: 1, duration: 0.2 })
+  gsap.to(projectsSection, { opacity: 1, duration: 0.4 })
 
-  gsap.to(projectsCmd, {
-    duration: 0.6 * speedMult,
-    text: { value: 'projects' },
-    ease: 'none',
-    onComplete: () => {
-      renderProjects()
-      revealLinks(speedMult)
-    },
+  scrambleReveal(projectsLabel, 'Projects', { duration: 400 }).then(() => {
+    renderProjects()
+    revealLinks(speedMult)
   })
 }
 
 function revealLinks(speedMult) {
   const linksSection = document.getElementById('links-section')
-  const linksCmd = document.getElementById('links-cmd')
+  const linksLabel = document.getElementById('links-label')
   const linksList = document.getElementById('links-list')
 
-  // Build links HTML
+  // Build links
   LINKS.forEach((link) => {
     const a = document.createElement('a')
     a.href = link.url
@@ -132,23 +127,14 @@ function revealLinks(speedMult) {
     once: true,
     onEnter: async () => {
       linksSection.style.visibility = 'visible'
-      gsap.to(linksSection, { opacity: 1, duration: 0.2 })
+      gsap.to(linksSection, { opacity: 1, duration: 0.3 })
 
-      await new Promise((resolve) => {
-        gsap.to(linksCmd, {
-          duration: 0.4 * speedMult,
-          text: { value: 'links' },
-          ease: 'none',
-          onComplete: resolve,
-        })
-      })
+      await scrambleReveal(linksLabel, 'Links', { duration: 300 })
 
-      // Scramble reveal each link
       for (let i = 0; i < LINKS.length; i++) {
         await scrambleReveal(linkEls[i], LINKS[i].label, { duration: 500 })
       }
 
-      // Show terminal end
       revealEnd()
     },
   })
@@ -156,19 +142,6 @@ function revealLinks(speedMult) {
 
 function revealEnd() {
   const termEnd = document.getElementById('terminal-end')
-  const eof = document.getElementById('eof')
-
   termEnd.style.visibility = 'visible'
-  gsap.to(termEnd, { opacity: 1, duration: 0.3 })
-
-  // EOF appears on scroll
-  ScrollTrigger.create({
-    trigger: eof,
-    start: 'top 95%',
-    once: true,
-    onEnter: () => {
-      eof.style.visibility = 'visible'
-      gsap.to(eof, { opacity: 1, duration: 1.5 })
-    },
-  })
+  gsap.to(termEnd, { opacity: 1, duration: 0.5 })
 }
