@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nullxnothing</title>
+  <meta name="description" content="solana developer. onchain tooling. web3 infrastructure." />
+  <meta property="og:title" content="nullxnothing" />
+  <meta property="og:description" content="solana developer. onchain tooling. web3 infrastructure." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#00ff00" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <canvas id="rain"></canvas>
+
+  <div id="crt">
+    <div id="scanlines"></div>
+    <div id="vignette"></div>
+
+    <div id="terminal">
+      <div id="boot"></div>
+
+      <div id="identity" class="hidden">
+        <div class="prompt-line">
+          <span class="prompt">&gt; </span><span id="name-text"></span><span class="cursor">_</span>
+        </div>
+        <div id="descriptor" class="comment"></div>
+      </div>
+
+      <div id="projects-section" class="hidden">
+        <div class="prompt-line">
+          <span class="prompt">&gt; </span><span id="projects-cmd"></span>
+        </div>
+        <div id="projects-list"></div>
+      </div>
+
+      <div id="links-section" class="hidden">
+        <div class="prompt-line">
+          <span class="prompt">&gt; </span><span id="links-cmd"></span>
+        </div>
+        <div id="links-list"></div>
+      </div>
+
+      <div id="terminal-end" class="hidden">
+        <div class="prompt-line">
+          <span class="prompt">&gt; </span><span class="cursor blink">_</span>
+        </div>
+      </div>
+
+      <div id="eof" class="hidden">
+        <span class="comment dim">// EOF</span>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

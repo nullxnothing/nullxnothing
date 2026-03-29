@@ -1,0 +1,144 @@
+#terminal {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+}
+
+.prompt {
+  color: rgba(0, 255, 0, 0.5);
+  user-select: none;
+}
+
+.prompt-line {
+  white-space: nowrap;
+}
+
+.comment {
+  color: rgba(0, 255, 0, 0.45);
+}
+
+.comment.dim {
+  color: rgba(0, 255, 0, 0.15);
+}
+
+.cursor {
+  display: inline-block;
+  color: #00ff00;
+}
+
+.cursor.blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.boot-line {
+  min-height: 1.6em;
+  overflow: hidden;
+}
+
+.boot-ok {
+  color: #00ff00;
+  text-shadow: 0 0 6px rgba(0, 255, 0, 0.5);
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.separator {
+  border: none;
+  border-top: 1px solid rgba(0, 255, 0, 0.1);
+  margin: 1.5rem 0;
+}
+
+.project {
+  margin-bottom: 1.5rem;
+}
+
+.project .project-cmd {
+  color: #00ff00;
+}
+
+.project .project-desc {
+  padding-left: 1.2rem;
+  color: rgba(0, 255, 0, 0.7);
+}
+
+.project .project-tags {
+  padding-left: 1.2rem;
+  color: rgba(0, 255, 0, 0.35);
+  font-size: 12px;
+}
+
+.project .project-links {
+  padding-left: 1.2rem;
+  font-size: 12px;
+}
+
+.project .project-links a {
+  margin-right: 1.5rem;
+}
+
+#name-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
+  letter-spacing: 0.05em;
+}
+
+#descriptor {
+  margin-top: 0.3rem;
+  margin-bottom: 2rem;
+}
+
+#identity {
+  margin: 2rem 0;
+}
+
+#projects-section {
+  margin: 1rem 0;
+}
+
+#links-section {
+  margin: 2rem 0;
+}
+
+#links-list {
+  padding-left: 1.2rem;
+}
+
+#links-list a {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+#terminal-end {
+  margin: 3rem 0 1rem;
+}
+
+#eof {
+  margin-bottom: 6rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 12px;
+  }
+
+  #terminal {
+    padding: 1rem;
+  }
+
+  #name-text {
+    font-size: 1.4rem;
+  }
+}

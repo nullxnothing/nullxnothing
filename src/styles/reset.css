@@ -1,0 +1,37 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: #0a0a0a;
+  color: #00ff00;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+}
+
+a {
+  color: #00ff00;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 255, 0, 0.3);
+  transition: text-shadow 0.2s;
+}
+
+a:hover {
+  text-shadow: 0 0 8px rgba(0, 255, 0, 0.6);
+  text-decoration-color: #00ff00;
+}
+
+::selection {
+  background: rgba(0, 255, 0, 0.2);
+  color: #00ff00;
+}
