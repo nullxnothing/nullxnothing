@@ -87,29 +87,16 @@ async function revealIdentity(speedMult) {
     })
   })
 
-  // Reveal projects + links
+  // Reveal links under identity
+  await revealLinks(speedMult)
+
+  // Reveal projects
   revealProjects(speedMult)
 }
 
-function revealProjects(speedMult) {
-  const projectsSection = document.getElementById('projects-section')
-  const projectsLabel = document.getElementById('projects-label')
-
-  projectsSection.style.visibility = 'visible'
-  gsap.to(projectsSection, { opacity: 1, duration: 0.4 })
-
-  scrambleReveal(projectsLabel, 'Projects', { duration: 400 }).then(() => {
-    renderProjects()
-    revealLinks(speedMult)
-  })
-}
-
-function revealLinks(speedMult) {
-  const linksSection = document.getElementById('links-section')
-  const linksLabel = document.getElementById('links-label')
+async function revealLinks(speedMult) {
   const linksList = document.getElementById('links-list')
 
-  // Build links
   LINKS.forEach((link) => {
     const a = document.createElement('a')
     a.href = link.url
@@ -121,22 +108,24 @@ function revealLinks(speedMult) {
 
   const linkEls = linksList.querySelectorAll('.link-item')
 
-  ScrollTrigger.create({
-    trigger: linksSection,
-    start: 'top 90%',
-    once: true,
-    onEnter: async () => {
-      linksSection.style.visibility = 'visible'
-      gsap.to(linksSection, { opacity: 1, duration: 0.3 })
+  linksList.style.visibility = 'visible'
+  gsap.to(linksList, { opacity: 1, duration: 0.3 })
 
-      await scrambleReveal(linksLabel, 'Links', { duration: 300 })
+  for (let i = 0; i < LINKS.length; i++) {
+    await scrambleReveal(linkEls[i], LINKS[i].label, { duration: 400 * speedMult })
+  }
+}
 
-      for (let i = 0; i < LINKS.length; i++) {
-        await scrambleReveal(linkEls[i], LINKS[i].label, { duration: 500 })
-      }
+function revealProjects(speedMult) {
+  const projectsSection = document.getElementById('projects-section')
+  const projectsLabel = document.getElementById('projects-label')
 
-      revealEnd()
-    },
+  projectsSection.style.visibility = 'visible'
+  gsap.to(projectsSection, { opacity: 1, duration: 0.4 })
+
+  scrambleReveal(projectsLabel, 'Projects', { duration: 400 }).then(() => {
+    renderProjects()
+    revealEnd()
   })
 }
 

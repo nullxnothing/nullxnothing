@@ -117,21 +117,19 @@
   text-shadow: 0 0 6px rgba(0, 255, 0, 0.4);
 }
 
-/* Links */
-#links-section {
-  margin: 0 0 2rem;
-}
-
+/* Links (inside identity) */
 #links-list {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
+  margin-top: 1.2rem;
 }
 
 #links-list a {
-  color: rgba(0, 255, 0, 0.5);
+  color: rgba(0, 255, 0, 0.4);
   text-decoration: none;
-  font-size: 13px;
+  font-size: 12px;
+  letter-spacing: 0.02em;
   transition: color 0.2s, text-shadow 0.2s;
 }
 
