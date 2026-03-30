@@ -41,6 +41,25 @@
 <table>
   <tr>
     <td width="50%" valign="top">
+      <h3 align="center">mpp-spl</h3>
+      <p align="center">
+        <a href="https://github.com/nullxnothing/mpp-spl">
+          <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" />
+          <img src="https://img.shields.io/badge/Solana-9945FF?style=flat-square&logo=solana&logoColor=white" />
+          <img src="https://img.shields.io/badge/MPP-FF6F00?style=flat-square&logoColor=white" />
+        </a>
+      </p>
+      <p align="center">Charge AI agents in any SPL token via Machine Payments Protocol — including pump.fun tokens from bonding curve</p>
+      <p align="center">
+        <a href="https://github.com/nullxnothing/mpp-spl">
+          <img src="https://img.shields.io/badge/source-0D1117?style=for-the-badge&logo=github&logoColor=white"/>
+        </a>
+        <a href="https://www.npmjs.com/package/mpp-spl">
+          <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"/>
+        </a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
       <h3 align="center">internet402</h3>
       <p align="center">
         <a href="https://github.com/nullxnothing/internet402">
