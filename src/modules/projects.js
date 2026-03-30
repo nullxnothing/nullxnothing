@@ -6,6 +6,13 @@ gsap.registerPlugin(ScrollTrigger)
 
 const projects = [
   {
+    slug: 'mpp-spl',
+    desc: 'Charge AI agents in any SPL token via Machine Payments Protocol — including pump.fun tokens from bonding curve',
+    tags: ['TypeScript', 'Solana', 'MPP'],
+    github: 'nullxnothing/mpp-spl',
+    live: 'npmjs.com/package/mpp-spl',
+  },
+  {
     slug: 'internet402',
     desc: 'Solana-native HTTP 402 payment protocol for AI agents',
     tags: ['TypeScript', 'Solana'],
