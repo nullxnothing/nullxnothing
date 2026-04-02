@@ -9,6 +9,10 @@
 </p>
 
 <p align="center">
+  <a href="https://nullxnothing.dev">
+    <img src="https://img.shields.io/badge/nullxnothing.dev-0D1117?style=flat&logo=vercel&logoColor=white" alt="Website" />
+  </a>
+  &nbsp;
   <a href="https://x.com/nullxnothing">
     <img src="https://img.shields.io/badge/X-000000?style=flat&logo=x&logoColor=white" alt="X" />
   </a>
@@ -111,6 +115,56 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
+      <h3 align="center">daemon</h3>
+      <p align="center">
+        <a href="https://github.com/nullxnothing/daemon">
+          <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" />
+          <img src="https://img.shields.io/badge/Electron-47848F?style=flat-square&logo=electron&logoColor=white" />
+        </a>
+      </p>
+      <p align="center">AI-native IDE with integrated terminal, Solana wallet, and one-click deploy</p>
+      <p align="center">
+        <a href="https://github.com/nullxnothing/daemon">
+          <img src="https://img.shields.io/badge/source-0D1117?style=for-the-badge&logo=github&logoColor=white"/>
+        </a>
+        <a href="https://daemon-landing.vercel.app">
+          <img src="https://img.shields.io/badge/live-9945FF?style=for-the-badge&logo=vercel&logoColor=white"/>
+        </a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3 align="center">ricomaps</h3>
+      <p align="center">
+        <a href="https://github.com/nullxnothing/ricomaps">
+          <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" />
+          <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
+        </a>
+      </p>
+      <p align="center">Solana forensic intelligence — trace funding chains, detect cabals and bundle clusters</p>
+      <p align="center">
+        <a href="https://github.com/nullxnothing/ricomaps">
+          <img src="https://img.shields.io/badge/source-0D1117?style=for-the-badge&logo=github&logoColor=white"/>
+        </a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3 align="center">mpp-spl</h3>
+      <p align="center">
+        <a href="https://github.com/nullxnothing/mpp-spl">
+          <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" />
+          <img src="https://img.shields.io/badge/Solana-9945FF?style=flat-square&logo=solana&logoColor=white" />
+        </a>
+      </p>
+      <p align="center">SPL Token + Pump.fun payment layer for the Machine Payments Protocol</p>
+      <p align="center">
+        <a href="https://github.com/nullxnothing/mpp-spl">
+          <img src="https://img.shields.io/badge/source-0D1117?style=for-the-badge&logo=github&logoColor=white"/>
+        </a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
       <h3 align="center">devcred-agent</h3>
       <p align="center">
         <a href="https://github.com/nullxnothing/devcred-agent">
@@ -121,21 +175,6 @@
       <p align="center">Autonomous agent monitoring pump.fun launches and scoring deployer reputation</p>
       <p align="center">
         <a href="https://github.com/nullxnothing/devcred-agent">
-          <img src="https://img.shields.io/badge/source-0D1117?style=for-the-badge&logo=github&logoColor=white"/>
-        </a>
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h3 align="center">nullset-wallet-recovery</h3>
-      <p align="center">
-        <a href="https://github.com/nullxnothing/nullset-solana-wallet-recovery">
-          <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" />
-          <img src="https://img.shields.io/badge/Solana-9945FF?style=flat-square&logo=solana&logoColor=white" />
-        </a>
-      </p>
-      <p align="center">Reclaim rent accounts, creator rewards, and track locked tokens across wallets</p>
-      <p align="center">
-        <a href="https://github.com/nullxnothing/nullset-solana-wallet-recovery">
           <img src="https://img.shields.io/badge/source-0D1117?style=for-the-badge&logo=github&logoColor=white"/>
         </a>
       </p>
